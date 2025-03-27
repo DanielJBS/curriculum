@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Currículum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <video autoplay loop muted playsinline id="bg-video">
+      <source src="media/green.mp4" type="video/mp4">
+      Tu navegador no soporta videos en HTML5.
+    </video>
+
+    <div class="hamburger-icon" id="icon">
+        <div class="icon-1" id="a"></div>
+        <div class="icon-2" id="b"></div>
+        <div class="icon-3" id="c"></div>
+        <div class="clear"></div>
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li onclick="location.href='index.html'">Home</li>
+            <li onclick="location.href='proyectos.html'">Projects</li>
+            <li onclick="location.href='curriculum.html'">Resume</li>
+            <li onclick="location.href='videocurriculum.html'">Videoresume</li>
+            <li onclick="location.href='contacto.html'">Contact</li>
+        </ul>
+    </nav>
+
+    <div class="dark-blue" id="blue"></div>
+
+    <section class="content">
+        <h1>Daniel Burgos</h1>
+        <p class="small">Software engineering student</p>
+    </section>
+  </header>
+
+  <!-- Nueva sección de información personal (Después del video) -->
+  <section class="personal-info">
+      <div class="container">
+          <div class="info-text">
+              <h2>About Me</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula orci eu sollicitudin suscipit.</p>
+          </div>
+          <div class="info-photo">
+              <img src="media/myphoto.jpg" alt="Daniel Burgos">
+          </div>
+      </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

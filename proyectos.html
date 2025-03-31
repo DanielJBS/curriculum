@@ -8,11 +8,6 @@
 </head>
 <body>
 
-  <header>
-    <video autoplay loop muted playsinline id="bg-video">
-      <source src="media/green.mp4" type="video/mp4">
-      Tu navegador no soporta videos en HTML5.
-    </video>
 
     <div class="hamburger-icon" id="icon">
         <div class="icon-1" id="a"></div>
@@ -32,54 +27,53 @@
 
     <div class="dark-blue" id="blue"></div>
 
-    <section class="content">
-        <h1>Daniel Burgos</h1>
-
-        <div class="texto1">
-          <p class="small">Software engineering student</p>
-      </div>
-        <p class="small">Software engineering student</p>
-    </section>
-  </header>
-
-  <div class="container">
-    <img src="/media/foto.jpg" alt="Imagen" class="imagen-circular">
-    <div class="texto">
-      <h2>About me</h2>
-      <p>Hi, I'm Daniel Burgos, a 6th-semester Systems Engineering student specializing in front-end development. I'm part of CSI, where I collaborate on projects and enhance my skills. Passionate about web technologies, I love creating intuitive and functional digital experiences.</p>
-    </div>
-</div>
-
-<section class="tech-stack">
-  <h2 class="tech-title">Technologies & Tools</h2>
-  <div class="grid-container">
-      <div class="skill">
-          <img src="/media/html.png" alt="HTML">
-      </div>
-      <div class="skill">
-          <img src="/media/css.png" alt="CSS">
-      </div>
-      <div class="skill">
-          <img src="/media/tailwind.png" alt="SCSS">
-      </div>
-      <div class="skill">
-          <img src="/media/js.png" alt="JavaScript">
-      </div>
-      <div class="skill">
-          <img src="/media/py.png" alt="Python">
-      </div>
-      <div class="skill">
-          <img src="/media/java.png" alt="Java">
-      </div>
-      <div class="skill">
-          <img src="/media/php.png" alt="PHP">
-      </div>
-      <div class="skill">
-        <img src="/media/angular.webp" alt="Angular">
-    </div>
-
-  
-</section>
+    <section class="projects">
+        <h3 class="section-title">My Recent Projects</h3>
+        <div class="projects-container">
+          <div class="project">
+            <h3 class="project-title">Abarrotes BUR#VAL</h3>
+            <p class="project-description">
+              A mobile application designed to manage the inventory of a small grocery store. The app aims to minimize stock losses and enhance inventory tracking through efficient management features.
+            </p>
+            <p class="project-details">
+              This project was developed to address the significant losses faced by a local grocery store, "Abarrotes BUR#VAL," due to mismanagement of inventory and poor stock tracking. The store was experiencing frequent stock shortages, overstock situations, and discrepancies in their inventory records, leading to financial losses.
+              <br><br>
+              To tackle these challenges, the application was designed with a user-friendly interface to allow employees to easily track product quantities, sales, and stock movements. Features included real-time updates of stock levels, alerts for low stock, and automatic generation of reports to help managers make informed decisions.
+              <br><br>
+              The app utilized a backend system with a database to store inventory data securely and allowed integration with point-of-sale (POS) systems to track sales in real time. This system not only minimized inventory losses but also helped the business streamline its operations, reduce human error, and improve overall profitability.
+              <br><br>
+              Technologies used in the project include:
+              <ul>
+                <li><strong>Frontend:</strong> React Native for the mobile app interface.</li>
+                <li><strong>Backend:</strong> Node.js and Express for handling API requests and managing the server.</li>
+                <li><strong>Database:</strong> MongoDB for storing product and sales data.</li>
+                <li><strong>Authentication:</strong> JWT (JSON Web Tokens) for secure user login.</li>
+              </ul>
+              The project resulted in a significant reduction in inventory losses, improving the store's profitability by enabling better inventory control and providing timely information to the store managers.
+            </p>
+          </div>
+          <div class="project">
+            <h3 class="project-title">GameStop Inventory API</h3>
+            <p class="project-description">
+                A RESTful API designed to manage the inventory of games in a GameStop store. This API allows for the addition, updating, deletion, and retrieval of game records, helping store managers keep track of the incoming and outgoing stock.
+            </p>
+            <p class="project-details">
+                The GameStop Inventory API was created to streamline the management of video game stock in a GameStop store. The API facilitates the CRUD operations (Create, Read, Update, Delete) for video games, which includes adding new games to the inventory, updating game details, removing games that are out of stock, and fetching a list of available games.
+                <br><br>
+                The API is designed to be efficient, scalable, and easy to integrate with existing point-of-sale (POS) systems. It provides endpoints for managing the games' details, including title, genre, platform, stock level, and price. Additionally, the API supports authentication via JWT for secure access, ensuring that only authorized personnel can make changes to the inventory.
+                <br><br>
+                Technologies used in the project include:
+                <ul>
+                    <li><strong>Backend:</strong> Node.js and Express for building the RESTful API.</li>
+                    <li><strong>Database:</strong> MongoDB for storing game inventory data.</li>
+                    <li><strong>Authentication:</strong> JWT (JSON Web Tokens) for secure login and access control.</li>
+                </ul>
+                The project helped streamline inventory management, ensuring that the store could accurately track its stock levels, minimize losses due to outdated or missing records, and provide better service to customers by always having up-to-date game availability.
+            </p>
+        </div>
+        
+        </div>
+      </section>     
 
 
 </div>
@@ -91,8 +85,7 @@
 </body>
 <!--Footer container-->
 <footer
-  class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white">
-  <div class="container pt-9">
+<footer class="flex flex-col items-center bg-white text-center text-black dark:bg-neutral-700 dark:text-white">  <div class="container pt-9">
     <!-- Social media icons container -->
     <div class="mb-6 flex justify-center space-x-2">
       <a

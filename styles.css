@@ -37,7 +37,6 @@ header {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 
-
 .icon-1, .icon-2, .icon-3 {
   position: absolute;
   left: 50%;
@@ -59,14 +58,15 @@ header {
 
 nav {
   background: #43640b;
-  position: absolute;
+  position: fixed; /* Cambiado a fixed para que el menú sea fijo en la pantalla */
   top: 0;
   left: 0;
-  height: 100%;
-  width: 0%;
+  height: 100%; /* Ocupa toda la altura */
+  width: 0%; /* Inicialmente está cerrado */
   z-index: 10;
-  opacity: 0;
+  opacity: 0; /* Inicialmente invisible */
   transition: all 600ms cubic-bezier(.62,.04,.3,1.56);
+  padding-top: 60px; /* Asegura que el contenido del menú esté debajo del ícono */
 
   ul {
     position: absolute;
@@ -130,11 +130,169 @@ nav.show {
   display: block;
 }
 
-
-p {
+.texto1 {
   color: #e0eaf3;
   font-size: 24px;
   animation: shotup 600ms ease-in-out 600ms forwards;
 }
 
+.container {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente */
+  margin: 10% auto; /* Margen superior e inferior del 10%, centrado horizontalmente */
+  width: 80%; /* Define el ancho del contenedor */
+}
 
+.imagen-circular {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover;
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.texto {
+  display: flex;
+  flex-direction: column; /* Apila "About me" y el párrafo */
+  justify-content: center;
+  color: black;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(255, 255, 255, 0.8); /* Fondo con opacidad */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.texto h2 {
+  font-size: 28px; /* Tamaño más grande */
+  font-weight: bold; /* Negritas */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.tech-stack {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.tech-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.skill {
+  position: relative;
+  background: #80a71a;
+  color: white;
+  border-radius: 20px; /* Bordes más redondeados */
+  overflow: hidden; /* Asegura que la imagen no sobresalga del borde */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  height: 150px; /* Ajusta la altura de cada cuadro */
+}
+
+.skill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen cubra completamente el contenedor */
+  position: absolute; /* Posiciona la imagen de fondo */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Asegura que la imagen quede detrás del texto */
+}
+
+.skill span {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el texto */
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.skill:hover {
+  background: #005bb5; /* Cambio de color al pasar el mouse */
+  transform: scale(1.05); /* Aumento de tamaño al hacer hover */
+}
+
+.video-player {
+  width: 100%; /* Ajusta al 100% del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+  max-width: 900px; /* Puedes poner un límite si quieres un tamaño máximo */
+}
+
+.projects {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem; /* Increased size */
+  font-weight: bold; /* Bold text */
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center; /* Centers the container horizontally */
+  gap: 20px;
+}
+
+.project {
+  background-color: #fff;
+  padding: 20px;
+  width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #80a71a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.project-link:hover {
+  background-color: #6a8e15;
+}

@@ -9,10 +9,6 @@
 <body>
 
   <header>
-    <video autoplay loop muted playsinline id="bg-video">
-      <source src="media/green.mp4" type="video/mp4">
-      Tu navegador no soporta videos en HTML5.
-    </video>
 
     <div class="hamburger-icon" id="icon">
         <div class="icon-1" id="a"></div>
@@ -26,60 +22,30 @@
             <li onclick="location.href='index.html'">Home</li>
             <li onclick="location.href='proyectos.html'">Projects</li>
             <li onclick="location.href='curriculum.html'">Resume</li>
-
         </ul>
     </nav>
 
     <div class="dark-blue" id="blue"></div>
-
-    <section class="content">
-        <h1>Daniel Burgos</h1>
-
-        <div class="texto1">
-          <p class="small">Software engineering student</p>
+    <section class="my-10">
+      <!-- Sección del video de YouTube -->
+      <div class="flex justify-center mb-5">
+        <iframe width="1200" height="650" src="https://youtu.be/0o98eo2Ip6s" title="Video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-        <p class="small">Software engineering student</p>
+      
+      <!-- Botón de descarga del resumen -->
+      <div class="text-center">
+        <a href="/media/CV.pdf" download>
+          <button class="px-6 py-2 text-[#80a71a] bg-white border-2 border-[#80a71a] rounded-full hover:bg-[#80a71a] hover:text-white focus:outline-none">
+            Descargar mi Resumen
+          </button>
+        </a>
+        
+      </div>
     </section>
+    
   </header>
 
-  <div class="container">
-    <img src="/media/foto.jpg" alt="Imagen" class="imagen-circular">
-    <div class="texto">
-      <h2>About me</h2>
-      <p>Hi, I'm Daniel Burgos, a 6th-semester Systems Engineering student specializing in front-end development. I'm part of CSI, where I collaborate on projects and enhance my skills. Passionate about web technologies, I love creating intuitive and functional digital experiences.</p>
-    </div>
-</div>
 
-<section class="tech-stack">
-  <h2 class="tech-title">Technologies & Tools</h2>
-  <div class="grid-container">
-      <div class="skill">
-          <img src="/media/html.png" alt="HTML">
-      </div>
-      <div class="skill">
-          <img src="/media/css.png" alt="CSS">
-      </div>
-      <div class="skill">
-          <img src="/media/tailwind.png" alt="SCSS">
-      </div>
-      <div class="skill">
-          <img src="/media/js.png" alt="JavaScript">
-      </div>
-      <div class="skill">
-          <img src="/media/py.png" alt="Python">
-      </div>
-      <div class="skill">
-          <img src="/media/java.png" alt="Java">
-      </div>
-      <div class="skill">
-          <img src="/media/php.png" alt="PHP">
-      </div>
-      <div class="skill">
-        <img src="/media/angular.webp" alt="Angular">
-    </div>
-
-  
-</section>
 
 
 </div>
@@ -91,8 +57,7 @@
 </body>
 <!--Footer container-->
 <footer
-  class="flex flex-col items-center bg-zinc-50 text-center text-surface dark:bg-neutral-700 dark:text-white">
-  <div class="container pt-9">
+<footer class="flex flex-col items-center bg-white text-center text-black dark:bg-neutral-700 dark:text-white">  <div class="container pt-9">
     <!-- Social media icons container -->
     <div class="mb-6 flex justify-center space-x-2">
       <a
